@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+    <!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <!-- Nav Bar -->
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">E-shopper</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Categories
+                </a>
+                <ul class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="index.html#camera">Cameras</a></li>
+                  <li><a class="dropdown-item" href="index.html#apple-pro">Apple Gadgets</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="index.html#drones">Drones</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="index.html#cart" tabindex="-1">
+                   Cart <i class="bi bi-cart-plus-fill"></i></a>
+              </li>
+            </ul>
+            <ul class="navbar-nav  mb-2 mb-lg-0 mx-lg-2 order-sm-last">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="myaccount" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  My Account
+                </a>
+                <ul class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="index.html#cart">My Orders</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="login.html">Logout</a></li>
+                </ul>
+              </li>
+            </ul>
+            <form class="d-flex search-form">
+              <input class="form-control " type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-success" type="submit" data-bs-toggle="tooltip" data-bs-placement="left" title="Search for all products">
+                <i class="bi bi-search"></i>
+              </button>
+            </form>
+
+          </div>
+        </div>
+      </nav>
+
+  <!-- Carousel -->
+
+  <div id="carouselExampleDark" class="carousel carousel-dark slide mb-5" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active" data-bs-interval="3000">
+        <img src="images/pro1-slide.jpg" class="d-block w-100" alt="...">
+
+      </div>
+      <div class="carousel-item" data-bs-interval="3000">
+        <img src="images/pro2-slide.jpg" class="d-block w-100" alt="...">
+
+      </div>
+      <div class="carousel-item" data-bs-interval="3000">
+        <img src="images/pro3-slide.jpg" class="d-block w-100" alt="...">
+
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+    <!-- Products -->
+
+    <div class="container mb-5">
+        <div id="products" class="row">
+
+            <div id="camera" class="col-xl-3 col-lg-4 col-md-6 position-relative">
+            <div class="card product-item">
+              <i class="bi bi-heart-fill position-absolute liked"></i>
+              <i class="bi bi-heart position-absolute like"></i>
+                <img src="images/pro3.jpg" onclick="goToProductDetails()" class="card-img-top" alt="..." data-bs-toggle="tooltip" data-bs-placement="top" title="Click to See Product Details">
+                <div class="card-body">
+                  <h6 class="card-subtitle mb-2 text-muted fw-light">Camera</h6>
+                  <h5 class="card-title">Canon WM-5</h5>
+                  <p class="card-text price">$300.00 <span class="float-end rating-stars">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                  </span></p>
+                  <div class="text-center">
+                    <a class="btn btn-dark w-100" onclick="showToast()" role="button">Add To Cart</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xl-3 col-lg-4 col-md-6 position-relative">
+              <div class="card product-item">
+                <i class="bi bi-heart-fill position-absolute liked"></i>
+                <i class="bi bi-heart position-absolute like"></i>
+                  <img src="images/pro7.jpg" onclick="goToProductDetails2()" class="card-img-top" alt="..." data-bs-toggle="tooltip" data-bs-placement="top" title="Click to See Product Details">
+                  <div class="card-body">
+                    <h6 class="card-subtitle mb-2 text-muted fw-light">Camera</h6>
+                    <h5 class="card-title">Canon YV-50</h5>
+                    <p class="card-text price">$400.00 <span class="float-end rating-stars">
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                    </span></p>
+                    <div class="text-center">
+                      <a class="btn btn-dark w-100" onclick="showToast()" role="button">Add To Cart</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-xl-3 col-lg-4 col-md-6 position-relative">
+                <div class="card product-item">
+                  <i class="bi bi-heart-fill position-absolute liked"></i>
+                  <i class="bi bi-heart position-absolute like"></i>
+                    <img src="images/pro8.jpg" onclick="goToProductDetails3()" class="card-img-top" alt="..." data-bs-toggle="tooltip" data-bs-placement="top" title="Click to See Product Details">
+                    <div class="card-body">
+                      <h6 class="card-subtitle mb-2 text-muted fw-light">Camera</h6>
+                      <h5 class="card-title">Canon SMX-90</h5>
+                      <p class="card-text price">$600.00 <span class="float-end rating-stars">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                      </span></p>
+                      <div class="text-center">
+                        <a class="btn btn-dark w-100" onclick="showToast()" role="button">Add To Cart</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-xl-3 col-lg-4 col-md-6 position-relative">
+                  <div class="card product-item">
+                    <i class="bi bi-heart-fill position-absolute liked"></i>
+                    <i class="bi bi-heart position-absolute like"></i>
+                      <img src="images/pro9.jpg" onclick="goToProductDetails4()" class="card-img-top" alt="..." data-bs-toggle="tooltip" data-bs-placement="top" title="Click to See Product Details">
+                      <div class="card-body">
+                        <h6 class="card-subtitle mb-2 text-muted fw-light">Camera</h6>
+                        <h5 class="card-title">Canon NVM-77</h5>
+                        <p class="card-text price">$1000.00 <span class="float-end rating-stars">
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                        </span></p>
+                        <div class="text-center">
+                          <a class="btn btn-dark w-100" onclick="showToast()" role="button">Add To Cart</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+
+
+            <div id="apple-pro" class="col-xl-3 col-lg-4 col-md-6 position-relative">
+                <div class="card product-item">
+                  <i class="bi bi-heart-fill position-absolute liked"></i>
+                  <i class="bi bi-heart position-absolute like"></i>
+                    <img src="images/pro2.jpg" onclick="goToProductDetails5()" class="card-img-top" alt="..." data-bs-toggle="tooltip" data-bs-placement="top" title="Click to See Product Details">
+                    <div class="card-body">
+                      <h6 class="card-subtitle mb-2 text-muted fw-light">SmartWatch</h6>
+                      <h5 class="card-title">Apple Watch 2</h5>
+                      <p class="card-text price">$500.75 <span class="float-end rating-stars">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                      </span></p>
+                      <div class="text-center">
+                        <a class="btn btn-dark w-100" onclick="showToast()" role="button">Add To Cart</a>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+
+            <div class="col-xl-3 col-lg-4 col-md-6 position-relative">
+              <div class="card product-item">
+                <i class="bi bi-heart-fill position-absolute liked"></i>
+                <i class="bi bi-heart position-absolute like"></i>
+                  <img src="images/pro10.jpg" onclick="goToProductDetails6()" class="card-img-top" alt="..." data-bs-toggle="tooltip" data-bs-placement="top" title="Click to See Product Details">
+                  <div class="card-body">
+                    <h6 class="card-subtitle mb-2 text-muted fw-light">Laptop</h6>
+                    <h5 class="card-title">MacBook Air</h5>
+                    <p class="card-text price">$1000.00 <span class="float-end rating-stars">
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                    </span></p>
+                    <div class="text-center">
+                      <a class="btn btn-dark w-100" onclick="showToast()" role="button">Add To Cart</a>
+                    </div>
+                  </div>
+                </div>
+            </div>
+
+            <div class="col-xl-3 col-lg-4 col-md-6 position-relative">
+                <div class="card product-item">
+                  <i class="bi bi-heart-fill position-absolute liked"></i>
+                  <i class="bi bi-heart position-absolute like"></i>
+                    <img src="images/pro4.jpg" onclick="goToProductDetails7()" class="card-img-top" alt="..." data-bs-toggle="tooltip" data-bs-placement="top" title="Click to See Product Details">
+                    <div class="card-body">
+                      <h6 class="card-subtitle mb-2 text-muted fw-light">Mobile</h6>
+                      <h5 class="card-title">iPhone 11</h5>
+                      <p class="card-text price">$799.75 <span class="float-end rating-stars">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                      </span></p>
+                      <div class="text-center">
+                        <a class="btn btn-dark w-100" onclick="showToast()" role="button">Add To Cart</a>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+
+            <div class="col-xl-3 col-lg-4 col-md-6 position-relative">
+                <div class="card product-item">
+                  <i class="bi bi-heart-fill position-absolute liked"></i>
+                  <i class="bi bi-heart position-absolute like"></i>
+                    <img src="images/pro5.jpg" onclick="goToProductDetails8()" class="card-img-top" alt="..." data-bs-toggle="tooltip" data-bs-placement="top" title="Click to See Product Details">
+                    <div class="card-body">
+                      <h6 class="card-subtitle mb-2 text-muted fw-light">Tablet</h6>
+                      <h5 class="card-title">iPad Pro</h5>
+                      <p class="card-text price">$999.75 <span class="float-end rating-stars">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                      </span></p>
+                      <div class="text-center">
+                        <a class="btn btn-dark w-100" onclick="showToast()" role="button">Add To Cart</a>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+
+
+            <div id="drones" class="col-xl-3 col-lg-4 col-md-6 position-relative">
+                <div class="card product-item">
+                  <i class="bi bi-heart-fill position-absolute liked"></i>
+                  <i class="bi bi-heart position-absolute like"></i>
+                    <img src="images/pro6.jpg" onclick="goToProductDetails9()" class="card-img-top" alt="..." data-bs-toggle="tooltip" data-bs-placement="top" title="Click to See Product Details">
+                    <div class="card-body">
+                      <h6 class="card-subtitle mb-2 text-muted fw-light">Drones</h6>
+                      <h5 class="card-title">XT-5</h5>
+                      <p class="card-text price">$1100.75 <span class="float-end rating-stars">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                      </span></p>
+                      <div class="text-center">
+                        <a class="btn btn-dark w-100" onclick="showToast()" role="button">Add To Cart</a>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+
+            <div class="col-xl-3 col-lg-4 col-md-6 position-relative">
+              <div class="card product-item">
+                <i class="bi bi-heart-fill position-absolute liked"></i>
+                <i class="bi bi-heart position-absolute like"></i>
+                  <img src="images/pro11.jpg" onclick="goToProductDetails10()" class="card-img-top" alt="..." data-bs-toggle="tooltip" data-bs-placement="top" title="Click to See Product Details">
+                  <div class="card-body">
+                    <h6 class="card-subtitle mb-2 text-muted fw-light">Drones</h6>
+                    <h5 class="card-title">WT-70</h5>
+                    <p class="card-text price">$700.75 <span class="float-end rating-stars">
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                    </span></p>
+                    <div class="text-center">
+                      <a class="btn btn-dark w-100" onclick="showToast()" role="button">Add To Cart</a>
+                    </div>
+                  </div>
+                </div>
+            </div>
+
+            <div class="col-xl-3 col-lg-4 col-md-6 position-relative">
+            <div class="card product-item">
+              <i class="bi bi-heart-fill position-absolute liked"></i>
+              <i class="bi bi-heart position-absolute like"></i>
+                <img src="images/pro12.jpg" onclick="goToProductDetails11()" class="card-img-top" alt="..." data-bs-toggle="tooltip" data-bs-placement="top" title="Click to See Product Details">
+                <div class="card-body">
+                  <h6 class="card-subtitle mb-2 text-muted fw-light">Drones</h6>
+                  <h5 class="card-title">YY-90</h5>
+                  <p class="card-text price">$2200.55 <span class="float-end rating-stars">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                  </span></p>
+                  <div class="text-center">
+                    <a class="btn btn-dark w-100" onclick="showToast()" role="button">Add To Cart</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xl-3 col-lg-4 col-md-6 position-relative">
+          <div class="card product-item">
+            <i class="bi bi-heart-fill position-absolute liked"></i>
+            <i class="bi bi-heart position-absolute like"></i>
+              <img src="images/pro13.jpg" onclick="goToProductDetails12()" class="card-img-top" alt="..." data-bs-toggle="tooltip" data-bs-placement="top" title="Click to See Product Details">
+              <div class="card-body">
+                <h6 class="card-subtitle mb-2 text-muted fw-light">Drones</h6>
+                <h5 class="card-title">SC-Z70</h5>
+                <p class="card-text price">$1000.50 <span class="float-end rating-stars">
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                </span></p>
+                <div class="text-center">
+                  <a class="btn btn-dark w-100" onclick="showToast()" role="button">Add To Cart</a>
+                </div>
+              </div>
+            </div>
+            </div>
+
+        </div>
+    </div>
+
+<!-- Cart -->
+
+<div id="cart" class="cart-sep bg-dark text-center">
+  <h2>Cart</h2>
+</div>
+<div class="container mb-5">
+  <div class="d-flex flex-row align-items-start">
+      <div class="col-8 d-flex flex-column m-2 mainContainer">
+
+
+      </div>
+
+      <div class="col-4 order p-3 m-2">
+          <h4>Order Total</h4>
+          
+          <div class="d-flex flex-row justify-content-between p-2">
+              <span class="billing-item">items</span>
+              <span class="billing-cost grand-total">$0</span>
+          </div>
+          <div class="d-flex flex-row justify-content-between p-2">
+              <span class="billing-item">Shipping</span>
+              <span class="billing-cost">$10</span>
+          </div>
+          <div class="d-flex flex-row justify-content-between p-2">
+              <span class="billing-item">Discount</span>
+              <span class="billing-cost">-$10</span>
+          </div>
+          <div class="d-flex flex-row justify-content-between p-2">
+              <span class="billing-item fs-5">Total</span>
+              <span class="billing-cost fs-5 grand-total">$0</span>
+          </div>
+
+          <div class="d-flex mt-3">
+              <a href="checkout.html" class="btn btn-primary flex-grow-1">Pay Now</a>
+          </div>
+      </div>
+  </div>
+</div>
+
+
+    <!-- Footer -->
+    <div class="footer mt-auto bg-dark text-light">
+        <div class="container py-3">
+            <div class="row d-flex footer-items">
+                <div class="col-md-4">
+                    <h5>Categories</h5>
+                    <ul>
+                        <li><a href="index.html#products">Watches</a></li>
+                        <li><a href="index.html#products">Mobiles</a></li>
+                        <li><a href="index.html#products">Tablets</a></li>
+                        <li><a href="index.html#products">Audio</a></li>
+                        <li><a href="index.html#products">Drones</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Useful Links</h5>
+                    <ul>
+                        <li><a href="404.html">Terms</a></li>
+                        <li><a href="404.html">Privacy</a></li>
+                        <li><a href="404.html">About us</a></li>
+                        <li><a href="404.html">Mission</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Get Updates</h5>
+                    <div class="d-flex subscribe">
+                        <input type="text" class="form-control">
+                        <button class="btn btn-warning">Subscribe</button>
+                    </div>
+                    <div class="mt-2">
+                        <div class="btn-group me-2 social-icons" role="group" aria-label="First group">
+                          <button type="button" class="btn btn-secondary mx-1">
+                            <a href="https://www.facebook.com/">
+                            <i class="bi bi-facebook"></i>
+                            </a>
+                          </button>
+                          <button type="button" class="btn btn-secondary mx-1">
+                            <a href="https://www.instagram.com/">
+                            <i class="bi bi-instagram"></i>
+                            </a>
+                          </button>
+                          <button type="button" class="btn btn-secondary mx-1">
+                            <a href="https://twitter.com/">
+                            <i class="bi bi-twitter"></i>
+                            </a>
+                          </button>
+                          <button type="button" class="btn btn-secondary mx-1">
+                            <a href="https://www.linkedin.com/">
+                            <i class="bi bi-linkedin"></i>
+                            </a>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- Toasts -->
+
+    <div class="toast align-items-center text-dark bg-warning border-0 position-fixed" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="d-flex">
+        <div class="toast-body">
+          Item is successfully added to your cart.
+        </div>
+        <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+    </div>
+
+<!-- Modal Start -->
+
+
+
+
+    <script src="app.js"></script>
+</body>
+</html>
